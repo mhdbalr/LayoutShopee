@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/idHead"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/orange"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="55dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/idImgScanner"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/scanner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/idDiv1"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idImgScanner"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idConstraintSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idDiv1"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/logoSpay"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/spay"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/saldoSpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 2.139"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/logoSpay"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/isiSaldoSpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi Saldo"
+                    app:layout_constraintTop_toBottomOf="@id/logoSpay"
+                    app:layout_constraintStart_toStartOf="@id/logoSpay"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/idDiv2"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idConstraintSaldo"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idConstraintKoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idDiv2"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/coin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/koin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/idSaldoKoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/coin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/isiSaldoCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi Saldo"
+                    app:layout_constraintTop_toBottomOf="@id/coin"
+                    app:layout_constraintStart_toStartOf="@id/coin"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/idDiv3"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idConstraintKoin"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/idConstraintTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7.5dp"
+                app:layout_constraintStart_toEndOf="@id/idDiv3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/transfer"
+                    android:layout_width="22dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/transfer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/idSaldoTransfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/transfer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/isiSaldoTransfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gratis"
+                    app:layout_constraintTop_toBottomOf="@id/transfer"
+                    app:layout_constraintStart_toStartOf="@id/transfer"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/voucher"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/voucher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCardView"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gratis"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Gratis Ongkir dan Voucher"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/voucher"
+        app:layout_constraintStart_toStartOf="@id/voucher"
+        app:layout_constraintEnd_toEndOf="@id/voucher"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pulsa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/pulsa"
+        app:layout_constraintStart_toEndOf="@id/voucher"
+        app:layout_constraintTop_toBottomOf="@+id/idCardView" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pulsaDanTagihan"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Pulsa, Tagihan, dan Tiket"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/pulsa"
+        app:layout_constraintStart_toStartOf="@id/pulsa"
+        app:layout_constraintEnd_toEndOf="@id/pulsa"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shoopeMall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shopeemall"
+        app:layout_constraintStart_toEndOf="@id/pulsa"
+        app:layout_constraintTop_toBottomOf="@+id/idCardView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/icomShoopeMall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Shoope Mall"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shoopeMall"
+        app:layout_constraintStart_toStartOf="@id/shoopeMall"
+        app:layout_constraintEnd_toEndOf="@id/shoopeMall"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shoopeSekitar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shopeesekitar"
+        app:layout_constraintStart_toEndOf="@id/shoopeMall"
+        app:layout_constraintTop_toBottomOf="@+id/idCardView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShoopeSekitar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="ShoopePay Sekitarmu"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shoopeSekitar"
+        app:layout_constraintStart_toStartOf="@id/shoopeSekitar"
+        app:layout_constraintEnd_toEndOf="@id/shoopeSekitar"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shoopeBarokah"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shopeebarokah"
+        app:layout_constraintStart_toEndOf="@id/shoopeSekitar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCardView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShoopeBarokah"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Shoope Barokah"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shoopeBarokah"
+        app:layout_constraintStart_toStartOf="@id/shoopeBarokah"
+        app:layout_constraintEnd_toEndOf="@id/shoopeBarokah"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shopeGames"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shopeegames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gratis"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShopeeGames"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hadiah Shopee"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shopeGames"
+        app:layout_constraintStart_toStartOf="@id/shopeGames"
+        app:layout_constraintEnd_toEndOf="@id/shopeGames"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shopeFood"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shopeefood"
+        app:layout_constraintStart_toEndOf="@id/shopeGames"
+        app:layout_constraintTop_toBottomOf="@+id/pulsaDanTagihan"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShopeeFood"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="ShoopeFood"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shopeFood"
+        app:layout_constraintStart_toStartOf="@id/shopeFood"
+        app:layout_constraintEnd_toEndOf="@id/shopeFood"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shopePilih"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/shopeepilih"
+        app:layout_constraintStart_toEndOf="@id/shopeFood"
+        app:layout_constraintTop_toBottomOf="@+id/icomShoopeMall" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShopePilih"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Shoope Pilih Lokal"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/shopePilih"
+        app:layout_constraintStart_toStartOf="@id/shopePilih"
+        app:layout_constraintEnd_toEndOf="@id/shopePilih"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/spayLater"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spaylater"
+        app:layout_constraintStart_toEndOf="@id/shopePilih"
+        app:layout_constraintTop_toBottomOf="@+id/txtShoopeSekitar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtSpayLater"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="SpayLater"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/spayLater"
+        app:layout_constraintStart_toStartOf="@id/spayLater"
+        app:layout_constraintEnd_toEndOf="@id/spayLater"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/lihatSemua"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/lihatsemua"
+        app:layout_constraintStart_toEndOf="@id/spayLater"
+        app:layout_constraintTop_toBottomOf="@+id/txtShoopeBarokah" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtLainnya"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Lihat Semua"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/lihatSemua"
+        app:layout_constraintStart_toStartOf="@id/lihatSemua"
+        app:layout_constraintEnd_toEndOf="@id/lihatSemua"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="410dp"
+        android:layout_height="123dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="395dp">
+
+        <ImageView
+            android:id="@+id/hemat1"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:src="@drawable/hemat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <ImageView
+            android:id="@+id/voucherDiskon"
+            android:layout_width="145dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="52dp"
+            android:src="@drawable/voucherdiskon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hemat1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.048" />
+
+        <ImageView
+            android:id="@+id/potonganOngkir"
+            android:layout_width="93dp"
+            android:layout_height="92dp"
+
+            android:src="@drawable/potonganongkir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/voucherDiskon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
